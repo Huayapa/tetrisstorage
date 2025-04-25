@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Grupo Ingles Tecnico",
+  "license": "ISC",
+  "description": "Tetris servidor para guardar los datos",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "5.1.0",
+    "mysql2": "3.14.0"
+  }
+}

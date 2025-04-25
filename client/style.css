@@ -1,0 +1,178 @@
+html {
+  font-family: sans-serif;
+}
+header {
+  width: 100%;
+  padding: 0.4rem 0;
+  text-align: center;
+  background-color: black;
+  border-bottom: 1px solid #39ff14;
+  & h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
+  }
+}
+body {
+  background-color: #1d1d1d;
+  margin: 0;
+  overflow: hidden;
+  overflow-y: auto;
+}
+main {
+  max-width: 120rem;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+
+}
+#game {
+  padding: 2rem;
+  background-color: black;
+  border-radius: 20px;
+  border: 2px solid #39ff14;
+}
+
+#game-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  gap: 2rem;
+  & article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    border: 2px solid #39ff14;
+  }
+}
+
+#instruction {
+  max-width: 50rem;
+  padding: 4rem 0;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+  & .instruction_list {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #game-container {
+    & #holdgame {
+      width: 4rem;
+    }
+    & #tablegame {
+      width: 10rem;
+    }
+    & #nextgame {
+      width: 4rem;
+    }
+  }
+  #instruction {
+    max-width: max-content;
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    & .instruction_list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 580px) {
+  #game {
+    padding: 0.4rem;
+  }
+  #game-container {
+    display: grid;
+    grid-template-columns: 30vw 1fr;
+    grid-template-rows: 12rem 1fr;
+    justify-content: start;
+    align-items: start;
+    grid-template-areas: 
+    "hold tablegame"
+    "next tablegame" 
+    ;
+    gap: 1rem;
+    & #hold {
+      grid-area: hold;
+    }
+    & #game {
+      grid-area: tablegame;
+    }
+    & #next {
+      grid-area: next;
+    }
+    & article {
+      padding: 0.4rem;
+    }
+  }
+  #instruction {
+    max-width: max-content;
+    box-sizing: border-box;
+    padding: 0.4rem;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    & .instruction_list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 1rem;
+    }
+  }
+}
+
+/* ! BOTONES */
+
+.buttons {
+  position: absolute;
+  bottom: 1rem;
+  & button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: 0;
+    background-color: black;
+    color: #39ff14;
+    border: 1px solid #39ff14;
+    transition: all 0.3s ease-in-out;
+    &:hover, :active{
+      background-color: #39ff14;
+      color: black;
+    }
+  }
+}
+#move {
+  left: 2rem;
+}
+#action {
+  right: 2rem;
+}
+
+@media screen and (max-width: 400px) {
+  #action {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

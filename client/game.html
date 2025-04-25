@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+  <title>Game proyect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>English project</h1>
+  </header>
+  <main>
+    <section id="game-container">
+      <!-- RESERVAR PIEZA -->
+      <article id="hold">
+        <span>HOLD</span>
+        <canvas id="holdgame"></canvas>
+      </article>
+      <!-- JUEGO PRINCIPAL -->
+      <article id="game">
+        <span class="scoretext">SCORE: <span id="score">0</span></span>
+        <canvas id="tablegame"></canvas>
+      </article>
+      <!-- MOSTRAR PIEZAS SIGUIENTES DEL TETRIS -->
+      <article id="next">
+        <span>NEXT</span>
+        <canvas id="nextgame"></canvas>
+      </article>
+    </section>
+    <section id="instruction">
+      <h2>INSTRUCTIONS</h2>
+      <article class="instruction_list">
+        <section>
+          <p>Use the keyboard "w,a,s,d" to move.</p>
+          <p>The "w" changes the rotation.</p>
+          <p>Use mouse "M" to place the piece instantly.</p>
+        </section>
+        <section>
+          <p>Press "c" to save the piece.</p>
+          <p>Press the "s" to lower the piece.</p>
+          <p>Saving the piece can only be done once per piece.</p>
+        </section>
+      </article>
+    </section>
+  </main>
+  <!-- BOTONES PARA INTERACCION -->
+  <section id="move" class="buttons">
+    <button id="left"><-</button>
+    <button id="down">v</button>
+    <button id="right">-></button>
+  </section>
+  <section id="action" class="buttons">
+    <button id="drop">v</button>
+    <button id="rotate">🔁</button>
+    <button id="holdclick">📦</button>
+  </section>
+  <script src="scripts/main.js" type="module"></script>
+</body>
+</html>
